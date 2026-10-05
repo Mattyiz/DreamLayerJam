@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9d8cb27f3651946ba29f8f97e26a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
-  size: 1
+  size: 0
   neededSize: 0
 --- !u!50 &8644172754989066090
 Rigidbody2D:
