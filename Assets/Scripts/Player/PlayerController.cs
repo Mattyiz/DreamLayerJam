@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
 
     public float size;
+    private float velocity = 0;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,6 +32,12 @@ public class PlayerController : MonoBehaviour
     {
         //player movement
         rb.linearVelocity = new Vector2(movementAxis.x * movementSpeed, movementAxis.y * movementSpeed);
+
+        if (this.transform.localScale.x == size) return;
+
+        this.transform.localScale = new Vector3(Mathf.SmoothDamp(this.transform.localScale.x, size, ref velocity, .5f),
+            Mathf.SmoothDamp(this.transform.localScale.x, size, ref velocity, .5f),
+            Mathf.SmoothDamp(this.transform.localScale.x, size, ref velocity, .5f));
     }
 
     public void Grow(float sizeToAdd)
@@ -39,6 +46,6 @@ public class PlayerController : MonoBehaviour
         movementSpeed += sizeToAdd;
         cameraZoom.Grow(sizeToAdd);
 
-        this.transform.localScale = new Vector3(size, size, size);
+        //this.transform.localScale = new Vector3(size, size, size);
     }
 }
