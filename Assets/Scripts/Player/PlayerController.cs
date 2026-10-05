@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementAxis;
 
     [SerializeField] private float movementSpeed;
+    [SerializeField] private CameraZoom cameraZoom;
+
 
     public float size;
 
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         size += sizeToAdd;
         movementSpeed += sizeToAdd;
-        Camera.main.orthographicSize += (sizeToAdd * 1.5f);
+        cameraZoom.Grow(sizeToAdd);
 
         this.transform.localScale = new Vector3(size, size, size);
     }
