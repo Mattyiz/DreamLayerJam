@@ -26,7 +26,6 @@ public class Object : MonoBehaviour
         //Debug.Log(player.size + " - " + neededSize);
 
         player.Grow(size);
-        Camera.main.orthographicSize += size;
         Destroy(this.gameObject);
     }
 }

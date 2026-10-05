@@ -34,7 +34,9 @@ public class PlayerController : MonoBehaviour
     public void Grow(float sizeToAdd)
     {
         size += sizeToAdd;
-        this.transform.localScale = new Vector3(size, size, size);
         movementSpeed += sizeToAdd;
+        Camera.main.orthographicSize += (sizeToAdd * 1.5f);
+
+        this.transform.localScale = new Vector3(size, size, size);
     }
 }
