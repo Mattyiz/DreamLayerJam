@@ -9,7 +9,10 @@ public class Object : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        this.transform.localScale = new Vector3(size, size, size);
+        if(size == 0)
+        {
+            size = (this.transform.localScale.x + this.transform.localScale.y) / 2.0f;
+        }
 
         if(neededSize == 0)
         {
@@ -25,7 +28,7 @@ public class Object : MonoBehaviour
 
         //Debug.Log(player.size + " - " + neededSize);
 
-        player.Grow(size);
+        player.Grow(size * .66f);
         Destroy(this.gameObject);
     }
 }
