@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float movementSpeed;
 
+    public float size;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,5 +29,12 @@ public class PlayerController : MonoBehaviour
     {
         //player movement
         rb.linearVelocity = new Vector2(movementAxis.x * movementSpeed, movementAxis.y * movementSpeed);
+    }
+
+    public void Grow(float sizeToAdd)
+    {
+        size += sizeToAdd;
+        this.transform.localScale = new Vector3(size, size, size);
+        movementSpeed += sizeToAdd;
     }
 }
