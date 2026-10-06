@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8986562550069896749}
   - component: {fileID: 8644172754989066090}
   - component: {fileID: 3403870522289860144}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EatItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

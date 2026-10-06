@@ -94,8 +94,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bug
   home: {x: 0, y: 0, z: 0}
-  radius: 2.5
-  moveSpeed: 1
+  radius: 3
+  moveSpeed: 1.5
+  waitTime: 2
+  waitCountdown: 0
   rb: {fileID: 5579633733818189312}
   nextPos: {x: 0, y: 0, z: 0}
 --- !u!50 &5579633733818189312 stripped

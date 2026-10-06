@@ -5,6 +5,8 @@ public class Bug : MonoBehaviour
     [SerializeField] private Vector3 home;
     [SerializeField] private float radius;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float waitTime;
+    [SerializeField] private float waitCountdown;
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private Vector3 nextPos;
@@ -14,11 +16,12 @@ public class Bug : MonoBehaviour
     {
         home = this.transform.position;
 
+        waitCountdown = waitTime;
         SetNextPos();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 distance = (nextPos - this.transform.position);
 
@@ -28,7 +31,13 @@ public class Bug : MonoBehaviour
         }
         else
         {
-            SetNextPos();
+            rb.linearVelocity = Vector3.zero;
+            waitCountdown -= Time.deltaTime;
+            if(waitCountdown <= 0)
+            {
+                SetNextPos();
+                waitCountdown = waitTime;
+            }
         }
     }
 

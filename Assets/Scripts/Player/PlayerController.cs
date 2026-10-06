@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
         this.transform.localScale = new Vector3(Mathf.SmoothDamp(this.transform.localScale.x, size, ref velocity, .5f),
             Mathf.SmoothDamp(this.transform.localScale.x, size, ref velocity, .5f),
-            Mathf.SmoothDamp(this.transform.localScale.x, size, ref velocity, .5f));
+            1);
     }
 
     public void Grow(float sizeToAdd)
