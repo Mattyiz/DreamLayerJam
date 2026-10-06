@@ -16,7 +16,7 @@ public class Object : MonoBehaviour
 
         if(neededSize == 0)
         {
-            neededSize = size * 1.01f;
+            neededSize = size * 1.1f;
         }
     }
 
