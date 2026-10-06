@@ -16,7 +16,7 @@ public class Object : MonoBehaviour
 
         if(neededSize == 0)
         {
-            neededSize = size * 1.1f;
+            neededSize = size * 1.25f;
         }
     }
 
@@ -28,7 +28,7 @@ public class Object : MonoBehaviour
 
         //Debug.Log(player.size + " - " + neededSize);
 
-        player.Grow(size * .66f);
+        player.Grow(size * .5f);
         Destroy(this.gameObject);
     }
 }
