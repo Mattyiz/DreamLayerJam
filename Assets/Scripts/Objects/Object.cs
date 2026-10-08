@@ -28,7 +28,7 @@ public class Object : MonoBehaviour
 
         //Debug.Log(player.size + " - " + neededSize);
 
-        player.Grow(size * .5f);
+        player.Grow(size * .33f);
         Destroy(this.gameObject);
     }
 }
