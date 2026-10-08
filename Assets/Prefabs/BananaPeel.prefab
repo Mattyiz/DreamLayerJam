@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaPeel
       objectReference: {fileID: 0}
+    - target: {fileID: 3403870522289860144, guid: dd207bdae23dfc847bd6d055684c56f5, type: 3}
+      propertyPath: m_Size.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403870522289860144, guid: dd207bdae23dfc847bd6d055684c56f5, type: 3}
+      propertyPath: m_Size.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403870522289860144, guid: dd207bdae23dfc847bd6d055684c56f5, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 10.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3403870522289860144, guid: dd207bdae23dfc847bd6d055684c56f5, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 10.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464727054395347046, guid: dd207bdae23dfc847bd6d055684c56f5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 426a6dd4cf6b21a428d90e74643633ee, type: 3}
     - target: {fileID: 8605466919241313803, guid: dd207bdae23dfc847bd6d055684c56f5, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
