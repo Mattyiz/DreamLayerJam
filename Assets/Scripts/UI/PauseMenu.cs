@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    public static PauseMenu Instance;
+
     [SerializeField] private InputManager inputManager;
     [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject winScreenUI;
 
 
     private bool isPauseMenuOpen = false;
+    private bool isWinScreenOpen = false;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+
         inputManager = InputManager.Instance;
 
         ExitPauseMenu();
@@ -28,6 +38,8 @@ public class PauseMenu : MonoBehaviour
 
     public void TogglePause()
     {
+        if (isWinScreenOpen) return;
+
         if (isPauseMenuOpen)
         {
             ExitPauseMenu();
@@ -61,5 +73,12 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1.0f;
+    }
+
+    public void Win()
+    {
+        Pause();
+        winScreenUI.SetActive(true);
+        isWinScreenOpen = true;
     }
 }

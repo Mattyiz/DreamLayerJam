@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementAxis;
 
     [SerializeField] private float movementSpeed;
+    [SerializeField] private float maxSize;
     [SerializeField] private CameraZoom cameraZoom;
 
 
@@ -46,6 +47,10 @@ public class PlayerController : MonoBehaviour
         movementSpeed += sizeToAdd;
         cameraZoom.Grow(sizeToAdd);
 
+        if(size >= maxSize)
+        {
+            PauseMenu.Instance.Win();
+        }
         //this.transform.localScale = new Vector3(size, size, size);
     }
 }
